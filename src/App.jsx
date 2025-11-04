@@ -60,7 +60,7 @@ export default function Blackjack() {
         setPuntosDealer(ptsD);
 
         if (ptsJ === 21) {
-          setMensaje("¡BLACKJACK! GANASTE");
+          setMensaje("nashe alto blackjack");
           setEstado("fin");
         } else {
           setEstado("jugando");
@@ -83,7 +83,7 @@ export default function Blackjack() {
         setPuntosJugador(pts);
 
         if (pts > 21) {
-          setMensaje("Te pasaste de 21... PERDISTE");
+          setMensaje("te requete pasaste");
           setEstado("fin");
         }
       });
@@ -111,9 +111,9 @@ export default function Blackjack() {
     };
 
     const terminarJuego = (puntosFinal) => {
-      if (puntosFinal > 21) setMensaje("¡GANASTE! El dealer se pasó");
-      else if (puntosFinal > puntosJugador) setMensaje("PERDISTE");
-      else if (puntosFinal < puntosJugador) setMensaje("¡GANASTE!");
+      if (puntosFinal > 21) setMensaje("mortal, se paso el dealer");
+      else if (puntosFinal > puntosJugador) setMensaje("chomazo perdiste");
+      else if (puntosFinal < puntosJugador) setMensaje("buenardopolis ganaste");
       else setMensaje("EMPATE");
       setEstado("fin");
     };
@@ -135,7 +135,7 @@ export default function Blackjack() {
       {["jugando", "fin"].includes(estado) && (
         <>
           <div className="mano-dealer">
-            <h3>DEALER</h3>
+            <h3>dealer</h3>
             <p className="puntos">
               {estado === "jugando" && manoDealer[0]
                 ? calcularPuntos([manoDealer[0]])
@@ -158,7 +158,7 @@ export default function Blackjack() {
           </div>
 
           <div className="mano-jugador">
-            <h3>TÚ</h3>
+            <h3>vos</h3>
             <p className="puntos">{puntosJugador}</p>
             <div className="cartas-grid">
               {manoJugador.map((carta, i) => (
@@ -175,10 +175,10 @@ export default function Blackjack() {
           {estado === "jugando" && (
             <div className="botones">
               <button onClick={pedir} className="btn-accion">
-                PEDIR
+                pedir
               </button>
               <button onClick={plantarse} className="btn-accion">
-                PLANTARSE
+                quedarse
               </button>
             </div>
           )}
@@ -187,7 +187,7 @@ export default function Blackjack() {
 
           {estado === "fin" && (
             <button onClick={iniciarJuego} className="btn-jugar">
-              JUGAR OTRA VEZ
+              otra vez
             </button>
           )}
         </>
