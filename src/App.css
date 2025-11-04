@@ -1,7 +1,6 @@
 .blackjack-container {
-  max-width: 900px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
   background: #0a3d0a;
   color: white;
@@ -10,47 +9,47 @@
 }
 
 .blackjack-title {
-  font-size: 2.8rem;
-  color: #ffd700;
-  margin-bottom: 30px;
-  text-shadow: 2px 2px 5px #000;
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px #000;
 }
 
 .mano-dealer,
 .mano-jugador {
   background: rgba(0, 0, 0, 0.3);
-  border-radius: 15px;
-  padding: 20px;
-  margin: 25px 0;
+  border-radius: 10px;
+  padding: 12px;
+  margin: 15px 0;
 }
 
 .mano-dealer h3,
 .mano-jugador h3 {
-  margin: 0 0 12px 0;
-  color: #ffcc00;
-  font-size: 1.6rem;
+  margin: 0 0 8px 0;
+  color: #ffffff;
+  font-size: 1.3rem;
 }
 
 .puntos {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  margin: 10px 0;
+  margin: 8px 0;
   color: #fff;
 }
 
 .cartas-grid {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 8px;
   flex-wrap: wrap;
-  margin: 15px 0;
+  margin: 10px 0;
 }
 
 .carta-img {
-  width: 95px;
-  border: 3px solid #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  width: 70px;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   transition: transform 0.2s;
 }
 
@@ -59,39 +58,39 @@
 }
 
 .botones {
-  margin: 30px 0;
+  margin: 20px 0;
 }
 
 .btn-jugar,
 .btn-accion {
-  background: #ffd700;
+  background: #ffffff;
   color: #000;
   font-weight: bold;
-  padding: 14px 32px;
-  margin: 0 12px;
+  padding: 10px 20px;
+  margin: 0 8px;
   border: none;
-  border-radius: 10px;
-  font-size: 1.2rem;
+  border-radius: 8px;
+  font-size: 1rem;
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .btn-jugar:hover,
 .btn-accion:hover {
-  background: #ffed4e;
-  transform: translateY(-3px);
+  background: #ffffff;
+  transform: translateY(-2px);
 }
 
 .resultado {
-  font-size: 2rem;
-  color: #ffcc00;
-  margin: 30px 0;
-  text-shadow: 1px 1px 4px #000;
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin: 20px 0;
+  text-shadow: 1px 1px 3px #000;
   font-weight: bold;
 }
 
 .cargando {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: #aaa;
-  margin: 40px 0;
+  margin: 30px 0;
 }

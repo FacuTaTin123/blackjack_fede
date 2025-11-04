@@ -12,7 +12,6 @@ export default function Blackjack() {
 
   const api = "https://deckofcardsapi.com/api/deck";
 
-  // Calcular valor de una carta
   const valorCarta = (carta) => {
     if (!carta) return 0;
     if (carta.value === "ACE") return 11;
@@ -20,7 +19,6 @@ export default function Blackjack() {
     return parseInt(carta.value) || 10;
   };
 
-  // Calcular puntos totales (con Ases flexibles)
   const calcularPuntos = (mano) => {
     if (!mano || mano.length === 0) return 0;
     let total = 0;
@@ -36,7 +34,6 @@ export default function Blackjack() {
     return total;
   };
 
-  // Iniciar juego
   const iniciarJuego = () => {
     setEstado("cargando");
     setManoJugador([]);
@@ -76,7 +73,6 @@ export default function Blackjack() {
       });
   };
 
-  // Pedir carta
   const pedir = () => {
     fetch(`${api}/${mazoId}/draw/?count=1`)
       .then((res) => res.json())
@@ -93,7 +89,6 @@ export default function Blackjack() {
       });
   };
 
-  // Plantarse
   const plantarse = () => {
     let manoActual = [...manoDealer];
     let pts = calcularPuntos(manoActual);
@@ -136,7 +131,6 @@ export default function Blackjack() {
         </button>
       )}
 
-      {estado === "cargando" && <p className="cargando">Repartiendo cartas...</p>}
 
       {["jugando", "fin"].includes(estado) && (
         <>
